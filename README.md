@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Acme Dashboard
 
-## Getting Started
+Um dashboard simples e funcional para a empresa Acme, criado seguindo o tutorial oficial do Next.js. Este projeto foi desenvolvido como parte dos primeiros 5 capítulos do curso "Learn Next.js" da documentação oficial.
 
-First, run the development server:
+## 🚀 O que foi implementado
+
+Este projeto implementa os conceitos básicos do Next.js 16 com App Router:
+
+- **Capítulo 1**: Configuração inicial do projeto com TypeScript
+- **Capítulo 2**: Estilização com Tailwind CSS
+- **Capítulo 3**: Otimização de fontes usando `next/font` (Inter)
+- **Capítulo 4**: Criação de layouts e páginas com rotas aninhadas
+- **Capítulo 5**: Navegação entre páginas usando `next/link`
+
+## 📁 Estrutura do Projeto
+
+```
+nextjs-dashboard/
+├── src/
+│   └── app/
+│       ├── dashboard/          # Rotas do dashboard
+│       │   ├── layout.tsx      # Layout compartilhado com sidebar
+│       │   ├── page.tsx        # Página inicial (/dashboard)
+│       │   ├── invoices/       # Página de invoices
+│       │   └── customers/      # Página de customers
+│       ├── ui/
+│       │   └── sidebar.tsx     # Componente da sidebar com navegação
+│       ├── layout.tsx          # Layout raiz
+│       ├── page.tsx            # Página inicial (redireciona para /dashboard)
+│       └── globals.css         # Estilos globais
+```
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Next.js 16** - Framework React com App Router
+- **TypeScript** - Tipagem estática
+- **Tailwind CSS** - Estilização utilitária
+- **next/font** - Otimização automática de fontes
+- **next/link** - Navegação otimizada
+
+## 🎨 Funcionalidades
+
+✅ Sidebar com logo Acme azul  
+✅ Navegação entre páginas (Home, Invoices, Customers)  
+✅ Estados visuais em hover e focus  
+✅ Destaque do link ativo  
+✅ Layout responsivo  
+✅ Rotas aninhadas funcionando corretamente  
+
+## 🏃 Como executar
+
+Primeiro, instale as dependências:
+
+```bash
+npm install
+```
+
+Depois, inicie o servidor de desenvolvimento:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador. A página inicial redireciona automaticamente para `/dashboard`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📝 Scripts Disponíveis
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` - Inicia o servidor de desenvolvimento
+- `npm run build` - Cria a build de produção
+- `npm run start` - Inicia o servidor de produção
+- `npm run lint` - Executa o linter
 
-## Learn More
+## 🔗 Links Úteis
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Learn Next.js Tutorial](https://nextjs.org/learn)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📚 Próximos Passos
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Este projeto implementa os conceitos básicos. Para continuar aprendendo, você pode:
 
-## Deploy on Vercel
+- Adicionar mais páginas e rotas
+- Implementar busca e filtros
+- Adicionar formulários e validação
+- Conectar com uma API ou banco de dados
+- Implementar autenticação
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Desenvolvido seguindo o tutorial oficial do Next.js 🎓
