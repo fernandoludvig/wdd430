@@ -16,18 +16,25 @@ Este projeto implementa os conceitos básicos do Next.js 16 com App Router:
 
 ```
 nextjs-dashboard/
-├── src/
-│   └── app/
-│       ├── dashboard/          # Rotas do dashboard
-│       │   ├── layout.tsx      # Layout compartilhado com sidebar
-│       │   ├── page.tsx        # Página inicial (/dashboard)
-│       │   ├── invoices/       # Página de invoices
-│       │   └── customers/      # Página de customers
-│       ├── ui/
-│       │   └── sidebar.tsx     # Componente da sidebar com navegação
-│       ├── layout.tsx          # Layout raiz
-│       ├── page.tsx            # Página inicial (redireciona para /dashboard)
-│       └── globals.css         # Estilos globais
+├── app/
+│   ├── dashboard/
+│   │   ├── customers/
+│   │   │   └── page.tsx
+│   │   ├── invoices/
+│   │   │   └── page.tsx
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── ui/
+│   │   ├── acme-logo.tsx
+│   │   ├── dashboard/
+│   │   │   ├── nav-links.tsx
+│   │   │   └── sidenav.tsx
+│   │   └── fonts.ts
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── package.json
+└── tsconfig.json
 ```
 
 ## 🛠️ Tecnologias Utilizadas
@@ -37,6 +44,8 @@ nextjs-dashboard/
 - **Tailwind CSS** - Estilização utilitária
 - **next/font** - Otimização automática de fontes
 - **next/link** - Navegação otimizada
+- **@heroicons/react** - Ícones para navegação
+- **clsx** - Manipulação condicional de classes
 
 ## 🎨 Funcionalidades
 
