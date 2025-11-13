@@ -1,5 +1,5 @@
 import { db } from '@vercel/postgres';
-import { customers, invoicesWithIds, revenue } from '../lib/placeholder-data';
+import { customers, invoicesWithIds, revenue } from '@/app/lib/placeholder-data';
 import bcrypt from 'bcrypt';
 
 export const dynamic = 'force-dynamic';

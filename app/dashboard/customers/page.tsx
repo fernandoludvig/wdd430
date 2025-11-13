@@ -4,6 +4,8 @@ import { lusitana } from '@/app/ui/fonts';
 import Search from '@/app/ui/search';
 import type { Metadata } from 'next';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'Customers',
 };
@@ -11,11 +13,12 @@ export const metadata: Metadata = {
 export default async function Page({
   searchParams,
 }: {
-  searchParams?: {
+  searchParams?: Promise<{
     query?: string;
-  };
+  }>;
 }) {
-  const query = searchParams?.query || '';
+  const params = await searchParams;
+  const query = params?.query || '';
   const customers = await fetchFilteredCustomers(query);
 
   return (

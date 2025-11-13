@@ -63,7 +63,7 @@ export const customers: Customer[] = [
   },
 ];
 
-export const invoices: Invoice[] = [
+export const invoices: Omit<Invoice, 'id'>[] = [
   {
     customer_id: customers[0].id,
     amount: 15795,
