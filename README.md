@@ -1,16 +1,26 @@
 # Acme Dashboard
 
-Um dashboard simples e funcional para a empresa Acme, criado seguindo o tutorial oficial do Next.js. Este projeto foi desenvolvido como parte dos primeiros 5 capítulos do curso "Learn Next.js" da documentação oficial.
+Um dashboard completo e funcional para a empresa Acme, criado seguindo o tutorial oficial do Next.js. Este projeto implementa todos os 16 capítulos do curso "Learn Next.js" da documentação oficial da Vercel.
 
 ## 🚀 O que foi implementado
 
-Este projeto implementa os conceitos básicos do Next.js 16 com App Router:
+Este projeto implementa todos os conceitos do Next.js 16 com App Router:
 
 - **Capítulo 1**: Configuração inicial do projeto com TypeScript
 - **Capítulo 2**: Estilização com Tailwind CSS
 - **Capítulo 3**: Otimização de fontes usando `next/font` (Inter)
 - **Capítulo 4**: Criação de layouts e páginas com rotas aninhadas
 - **Capítulo 5**: Navegação entre páginas usando `next/link`
+- **Capítulo 6**: Configuração do banco de dados Postgres
+- **Capítulo 7**: Busca de dados do banco
+- **Capítulo 8**: Renderização estática e dinâmica
+- **Capítulo 9**: Streaming com React Suspense
+- **Capítulo 11**: Busca e paginação
+- **Capítulo 12**: Mutação de dados com Server Actions
+- **Capítulo 13**: Tratamento de erros
+- **Capítulo 14**: Melhorias de acessibilidade
+- **Capítulo 15**: Autenticação com NextAuth.js
+- **Capítulo 16**: Metadata e SEO
 
 ## 📁 Estrutura do Projeto
 
@@ -42,19 +52,25 @@ nextjs-dashboard/
 - **Next.js 16** - Framework React com App Router
 - **TypeScript** - Tipagem estática
 - **Tailwind CSS** - Estilização utilitária
-- **next/font** - Otimização automática de fontes
-- **next/link** - Navegação otimizada
-- **@heroicons/react** - Ícones para navegação
-- **clsx** - Manipulação condicional de classes
+- **Vercel Postgres** - Banco de dados
+- **NextAuth.js** - Autenticação
+- **Zod** - Validação de formulários
+- **React 19** - Biblioteca UI
+- **@heroicons/react** - Ícones
+- **bcrypt** - Hash de senhas
 
 ## 🎨 Funcionalidades
 
-✅ Sidebar com logo Acme azul  
-✅ Navegação entre páginas (Home, Invoices, Customers)  
-✅ Estados visuais em hover e focus  
-✅ Destaque do link ativo  
-✅ Layout responsivo  
-✅ Rotas aninhadas funcionando corretamente  
+✅ Dashboard completo com gráficos e cards de métricas  
+✅ Página de invoices com busca e paginação  
+✅ CRUD completo de invoices (Create, Read, Update, Delete)  
+✅ Página de customers com busca  
+✅ Sistema de autenticação completo  
+✅ Tratamento de erros robusto  
+✅ Validação de formulários com Zod  
+✅ Streaming de dados com Suspense  
+✅ Metadata configurada para SEO  
+✅ Layout responsivo e acessível  
 
 ## 🏃 Como executar
 
@@ -85,15 +101,29 @@ Abra [http://localhost:3000](http://localhost:3000) no seu navegador. A página 
 - [Learn Next.js Tutorial](https://nextjs.org/learn)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 
-## 📚 Próximos Passos
+## 🔐 Credenciais de Teste
 
-Este projeto implementa os conceitos básicos. Para continuar aprendendo, você pode:
+- **Email**: `user@nextmail.com`
+- **Senha**: `123456`
 
-- Adicionar mais páginas e rotas
-- Implementar busca e filtros
-- Adicionar formulários e validação
-- Conectar com uma API ou banco de dados
-- Implementar autenticação
+## 📋 Configuração do Banco de Dados
+
+1. Crie uma conta na Vercel e conecte seu repositório
+2. Crie um banco de dados Postgres na Vercel
+3. Adicione as variáveis de ambiente no arquivo `.env.local`:
+   ```
+   POSTGRES_URL="postgres://..."
+   POSTGRES_PRISMA_URL="postgres://..."
+   POSTGRES_URL_NO_SSL="postgres://..."
+   POSTGRES_URL_NON_POOLING="postgres://..."
+   POSTGRES_USER="..."
+   POSTGRES_HOST="..."
+   POSTGRES_PASSWORD="..."
+   POSTGRES_DATABASE="..."
+   AUTH_SECRET="your-secret-key"
+   AUTH_URL="http://localhost:3000/api/auth"
+   ```
+4. Execute o seed: `http://localhost:3000/api/seed`
 
 ---
 
