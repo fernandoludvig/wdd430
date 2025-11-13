@@ -1,4 +1,4 @@
-import { db } from '@vercel/postgres';
+import { db } from '@/app/lib/db';
 import { customers, invoicesWithIds, revenue } from '@/app/lib/placeholder-data';
 import bcrypt from 'bcrypt';
 
